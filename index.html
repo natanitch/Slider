@@ -1,0 +1,71 @@
+<!--Cлайдер из 4 фото минимум
+Над слайдером название каждого фото, которое меняется при смене слайда
+Под слайдером есть кнопка "изменить надпись" принажатии на нее выпадает поле - Текстовое 
+Вводим туда что-то и это заменяет строку над слайдом))-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Example_GA</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div class="slides-container">
+    <div class="slider-show">
+      <div class="picturename" id="pic1">долина камней</div>
+      <img class="imgslide" src="Pictures/2015-11-08 12.23.15.jpg" height="500" alt="долина камней">
+    </div>  
+    <div class="slider-show">
+      <div class="picturename" id="pic2">не загадать ли нам желание?</div>
+      <img class="imgslide" src="Pictures/2015-11-08 12.23.44.jpg" height="500" alt="камни загадать желание">
+    </div>
+    <div class="slider-show">
+      <div class="picturename" id="pic3">там вдалеке....</div>
+      <img class="imgslide" src="Pictures/2015-11-08 12.35.00.jpg" height="500" alt="долина">
+    </div>
+    <div class="slider-show">
+      <div class="picturename" id="pic4">Атлантический океан</div>
+      <img class="imgslide" src="Pictures/2015-11-10 17.42.47.jpg" height="500" alt="Атлантический океан">
+    </div>
+    <div class="slider-show">
+      <div class="picturename" id="pic5">берег Атлантического океана</div>
+      <img class="imgslide" src="Pictures/2015-11-14 10.20.47.jpg" height="500" alt="берег Атлантического океана">
+    </div>
+    <div class="slider-show">
+      <div class="picturename" id="pic6">отлив</div>
+      <img class="imgslide" src="Pictures/2015-11-14 10.25.18.jpg" height="500" alt="отлив">
+    </div>
+    <div class="slider-show">
+      <div class="picturename" id="pic7">без названия</div>
+      <img class="imgslide" src="Pictures/2017-07-27 17.39.43.jpg" height="500" alt="утка в кустах">
+    </div>
+    <a class="prev" onclick="plusSlidesPrev()">&#10094</a>
+    <a class="next" onclick="plusSlidesNext()">&#10095</a>
+
+
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+  
+  
+  <button class="tin-tack" type="button" onclick="showInput()">изменить надпись</button>
+   
+  <input id="changepicname" type="text" placeholder="enter new picture name" autofocus onchange="changePicName()" onreset="clear()">
+   
+</div>
+ 
+
+  <script src="script.js"></script> 
+</body>
+
+</html>

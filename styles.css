@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: lightseagreen;
+}
+
+img {
+  width: 100%;
+}
+
+.slides-container {
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(192, 192, 192, 0.6)
+}
+
+.picturename {
+  color: lightgrey;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 3px 2px 5px rgb(255, 192, 192), 3px 2px 5px rgb(15, 5, 155);
+  padding: 8px 12px 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px 2px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.tin-tack {
+  width: 13%;
+  background-color: lightgrey;
+  display: block;
+  color: #717171;
+  padding: 1px 4px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 15px;
+}
+
+.tin-tack:hover {
+  background-color: #888888;
+  color: rgb(255, 192, 192);
+}
+
+input {
+  display: none;
+  width: 15%;
+  font-size: 1em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="tin-tack"] {
+    width: 50%;
+  }
+}
